@@ -1,0 +1,14 @@
+.card{
+    height: 40vh;
+    width: 50vh;
+    margin: 8%;
+    border: solid 1px white;
+    border-radius: 10px;
+    text-align: center;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card:hover {
+    border: solid 1px rgb(175, 175, 236);
+}

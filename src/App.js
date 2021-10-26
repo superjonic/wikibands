@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Landing from './components/Landing';
+import Home from './components/Home/Home';
+import BandDetail from './components/Banddetail/BandDetail';
+import Signup from './components/Signup/Signup';
+import Login from './components/Login/Login';
+import Auth0ProviderWithHistory from './auth0Provider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Auth0ProviderWithHistory>
+      <Switch>
+        <Route exact path ="/"> <Landing /> </Route>
+        <Route path ="/register"> <Signup /> </Route>
+        <Route path ="/login"> <Login /> </Route>
+        <Route path="/home">  <Home />  </Route>
+        <Route path ="/band/:id"> <BandDetail /> </Route>
+
+      </Switch>
+    </Auth0ProviderWithHistory>
   );
 }
 

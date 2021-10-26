@@ -1,0 +1,24 @@
+.form {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 45%;
+    padding: 20px;
+    width: 65vh;
+    color: white;
+  }
+
+  .back {
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .inputs {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+      
+  }
